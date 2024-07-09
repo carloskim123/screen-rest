@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+ if ('serviceWorker' in navigator) {
+         navigator.serviceWorker.register('./scripts/sw.js')
+             .then(registration => {
+                 console.log('Service Worker registered successfully:', registration);
+             })
+             .catch(error => {
+                 console.error('Service Worker registration failed:', error);
+             });
+     }
+        </script>
+        <title>Screen Rest</title>
+    </head>
+    <body>
+        <h1>Screen Rest</h1>
+        <p id="usage-time">Usage Time: 0 seconds</p>
+        <button id="reset-button">Reset Timer</button>
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
